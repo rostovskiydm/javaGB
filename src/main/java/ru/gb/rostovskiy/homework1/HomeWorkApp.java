@@ -2,6 +2,17 @@ package ru.gb.rostovskiy.homework1;
 
 public class HomeWorkApp {
 
+   public static void printColor(){
+       int value = 20;
+       if (value <= 0) {
+           System.out.println("Красный");
+       } else if (value <= 100) {
+           System.out.println("Жёлтый");
+       } else {
+           System.out.println("Зеленый");
+       }
+   }
+
     public static void checkSumSign(){
         int a = -2300;
         int b = 987;
@@ -21,7 +32,7 @@ public class HomeWorkApp {
     public static void main(String[] args) {
         printThreeWords();
         checkSumSign();
-
+        printColor();
     }
 
 }
