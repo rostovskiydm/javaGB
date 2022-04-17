@@ -2,7 +2,16 @@ package ru.gb.rostovskiy.homework1;
 
 public class HomeWorkApp {
 
-   public static void printColor(){
+    public static void compareNumbers(){
+        int a = 210;
+        int b = -970;
+        if (a >= b){
+            System.out.println("a>=b");
+        }else{
+            System.out.println("a < b");
+        }
+   }
+    public static void printColor(){
        int value = 20;
        if (value <= 0) {
            System.out.println("Красный");
@@ -33,6 +42,7 @@ public class HomeWorkApp {
         printThreeWords();
         checkSumSign();
         printColor();
+        compareNumbers();
     }
 
 }
