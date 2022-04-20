@@ -18,20 +18,28 @@ public class HomeworkTwo {
         }
     }
 
-    public static boolean thirdTask(int number3){
+    public static boolean thirdTask(int number3) {
         return number3 < 0;
     }
 
-    public static void fourthTask(String text, int iterations){
+    public static void fourthTask(String text, int iterations) {
         for (int i = 1; i <= iterations; i++) {
-            System.out.println(text + " Вывод " + i  + "-й строки из " + iterations);
+            System.out.println(text + " Вывод " + i + "-й строки из " + iterations);
         }
+        System.out.println();
+    }
+
+    public static boolean fifthTask(int currentYear) {
+        if ((currentYear % 4 == 0) && (currentYear % 100 != 0)) {
+            return true;
+        } else return (currentYear % 400 == 0);
     }
 
     public static void main(String[] args) {
         int firstVar = new Random().nextInt(10) + 1;
         int secondVar = new Random().nextInt(25) - 10;
         String phrase = "Это выводится задание №4.";
+        int randomYear = 2004;
 
         boolean resultOfFirstTask = firstTask(firstVar, secondVar);
         System.out.println("Результат задания №1: " + resultOfFirstTask);
@@ -47,7 +55,7 @@ public class HomeworkTwo {
 
         fourthTask(phrase, firstVar);
 
-
-
+        boolean resultOfFifthTask = fifthTask(randomYear);
+        System.out.println("Результат задния №5: заданный год " + "\"" + randomYear + "\" високосный? Ответ: " + resultOfFifthTask);
     }
 }
