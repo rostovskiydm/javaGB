@@ -22,9 +22,16 @@ public class HomeworkTwo {
         return number3 < 0;
     }
 
+    public static void fourthTask(String text, int iterations){
+        for (int i = 1; i <= iterations; i++) {
+            System.out.println(text + " Вывод " + i  + "-й строки из " + iterations);
+        }
+    }
+
     public static void main(String[] args) {
-        int firstVar = new Random().nextInt(10);
+        int firstVar = new Random().nextInt(10) + 1;
         int secondVar = new Random().nextInt(25) - 10;
+        String phrase = "Это выводится задание №4.";
 
         boolean resultOfFirstTask = firstTask(firstVar, secondVar);
         System.out.println("Результат задания №1: " + resultOfFirstTask);
@@ -37,6 +44,10 @@ public class HomeworkTwo {
         System.out.println("Результат задания №3: " + resultOfThirdTask);
         System.out.println("Заданное число: " + secondVar);
         System.out.println();
+
+        fourthTask(phrase, firstVar);
+
+
 
     }
 }
