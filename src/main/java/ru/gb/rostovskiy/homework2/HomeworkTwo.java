@@ -39,7 +39,7 @@ public class HomeworkTwo {
         int firstVar = new Random().nextInt(10) + 1;
         int secondVar = new Random().nextInt(25) - 10;
         String phrase = "Это выводится задание №4.";
-        int randomYear = 2004;
+        int randomYear = new Random().nextInt(5000);
 
         boolean resultOfFirstTask = firstTask(firstVar, secondVar);
         System.out.println("Результат задания №1: " + resultOfFirstTask);
