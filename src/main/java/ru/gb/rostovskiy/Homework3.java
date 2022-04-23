@@ -1,6 +1,5 @@
 package ru.gb.rostovskiy;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -10,6 +9,8 @@ public class Homework3 {
         secondTaskSolution();
         thirdTaskSolution();
         fourthTaskSolution();
+        int length = 15, value = 6;
+        System.out.println("Решение задания №5: \n" + Arrays.toString(fifthTaskSolution(length, value)));
     }
 
     public static void firstTaskSolution() {
@@ -62,6 +63,12 @@ public class Homework3 {
             }
             System.out.println();
         }
+    }
+
+    public static int[] fifthTaskSolution(int len, int initialValue) {
+        int[] array = new int[len];
+        Arrays.fill(array, initialValue);
+        return array;
     }
 }
 
