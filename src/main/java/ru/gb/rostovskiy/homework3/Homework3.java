@@ -1,4 +1,4 @@
-package ru.gb.rostovskiy;
+package ru.gb.rostovskiy.homework3;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -12,6 +12,8 @@ public class Homework3 {
         int length = 15, value = 6;
         System.out.println("Решение задания №5: \n" + Arrays.toString(fifthTaskSolution(length, value)) + "\n");
         sixthTaskSolution();
+        int[] arrayCheckSum = new int[10];
+
     }
 
     public static void firstTaskSolution() {
@@ -97,5 +99,9 @@ public class Homework3 {
             System.out.println("Упс! Массив получился пустым.\n");
         }
     }
+
+ /*   public static boolean seventhTaskSolution(int[] array){
+
+    }*/
 }
 
