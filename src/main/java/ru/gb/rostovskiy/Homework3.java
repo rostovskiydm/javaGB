@@ -9,8 +9,9 @@ public class Homework3 {
         firstTaskSolution();
         secondTaskSolution();
         thirdTaskSolution();
-
+        fourthTaskSolution();
     }
+
     public static void firstTaskSolution() {
         System.out.println("Решение задания №1");
         int[] arr = new int[15];
@@ -32,20 +33,35 @@ public class Homework3 {
         System.out.println("Решение задания №2");
         int[] arr = new int[100];
         for (int i = 1; i <= arr.length; i++) {
-            arr[i-1] = i;
+            arr[i - 1] = i;
         }
         System.out.println("Полученный массив: \n" + Arrays.toString(arr) + "\n");
     }
 
-    public static void thirdTaskSolution(){
+    public static void thirdTaskSolution() {
         System.out.println("Решение задания №3");
         int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < 6){
+            if (arr[i] < 6) {
                 arr[i] *= 2;
             }
         }
         System.out.println("Получившийся массив: \n" + Arrays.toString(arr) + "\n");
+    }
+
+    public static void fourthTaskSolution() {
+        System.out.println("Решение задания №4");
+        int[][] arr = new int[10][10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i][i] = 1;
+            arr[arr.length - 1 - i][i] = 1;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.printf("%3d", arr[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
 
