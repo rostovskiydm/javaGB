@@ -12,7 +12,9 @@ public class Homework3 {
         int length = 15, value = 6;
         System.out.println("Решение задания №5: \n" + Arrays.toString(fifthTaskSolution(length, value)) + "\n");
         sixthTaskSolution();
-        int[] arrayCheckSum = new int[10];
+        int[] arrayCheckSum = {2, 4, 6, 8, 2, 1, 1};
+        System.out.println("Решение задачи №7");
+        System.out.println(seventhTaskSolution(arrayCheckSum));
 
     }
 
@@ -95,13 +97,26 @@ public class Homework3 {
             System.out.println("Получившийся массив: \n" + Arrays.toString(array));
             System.out.println("Минимальное значение массива: " + min);
             System.out.println("Максимальное значение массива: " + max + "\n");
-        }else{
-            System.out.println("Упс! Массив получился пустым.\n");
+        } else {
+            System.out.println("Упс! Массив получился пустым. Возможно, повезет при следующем запуске.\n");
         }
     }
 
- /*   public static boolean seventhTaskSolution(int[] array){
+    public static boolean seventhTaskSolution(int[] array) {
+        int leftSum = 0;
+        for (int i = 0; i < array.length; i++) {
+            int rightSum = 0;
+            for (int j = array.length - 1; j > i; j--) {
+                rightSum += array[j];
+            }
+            leftSum += array[i];
+            if (leftSum == rightSum) {
+                System.out.println("Сумма cторон равна: " + leftSum + ", дошли до индекса массива: " + i);
+                return true;
+            }
+        }
+        return false;
 
-    }*/
+    }
 }
 
