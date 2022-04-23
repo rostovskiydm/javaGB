@@ -10,7 +10,8 @@ public class Homework3 {
         thirdTaskSolution();
         fourthTaskSolution();
         int length = 15, value = 6;
-        System.out.println("Решение задания №5: \n" + Arrays.toString(fifthTaskSolution(length, value)));
+        System.out.println("Решение задания №5: \n" + Arrays.toString(fifthTaskSolution(length, value)) + "\n");
+        sixthTaskSolution();
     }
 
     public static void firstTaskSolution() {
@@ -69,6 +70,32 @@ public class Homework3 {
         int[] array = new int[len];
         Arrays.fill(array, initialValue);
         return array;
+    }
+
+    public static void sixthTaskSolution() {
+        System.out.println("Решение задания №6");
+        int[] array = new int[new Random().nextInt(11)];
+        int min = 0, max = 0;
+        if (array.length > 0) {
+            for (int i = 0; i < array.length; i++) {
+                array[i] = new Random().nextInt(100);
+                if (i == 0) {
+                    min = array[i];
+                    max = array[i];
+                }
+                if (min > array[i]) {
+                    min = array[i];
+                }
+                if (max < array[i]) {
+                    max = array[i];
+                }
+            }
+            System.out.println("Получившийся массив: \n" + Arrays.toString(array));
+            System.out.println("Минимальное значение массива: " + min);
+            System.out.println("Максимальное значение массива: " + max + "\n");
+        }else{
+            System.out.println("Упс! Массив получился пустым.\n");
+        }
     }
 }
 
