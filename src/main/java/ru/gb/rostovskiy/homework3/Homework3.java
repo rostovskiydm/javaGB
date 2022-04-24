@@ -9,13 +9,22 @@ public class Homework3 {
         secondTaskSolution();
         thirdTaskSolution();
         fourthTaskSolution();
+
         int length = 15, value = 6;
         System.out.println("Решение задания №5: \n" + Arrays.toString(fifthTaskSolution(length, value)) + "\n");
+
         sixthTaskSolution();
         int[] arrayCheckSum = {2, 4, 6, 8, 2, 1, 1};
+
         System.out.println("Решение задачи №7");
         System.out.println(seventhTaskSolution(arrayCheckSum));
 
+        int n = 7; // если задаем > 0, то смещаем эл-ы массива вправо, иначе - влево
+        int[] shiftArray = new int[5];
+        for (int i = 0; i < shiftArray.length; i++) {
+            shiftArray[i] = new Random().nextInt(10);
+        }
+        eightTaskSolution(n, shiftArray);
     }
 
     public static void firstTaskSolution() {
@@ -116,7 +125,26 @@ public class Homework3 {
             }
         }
         return false;
+    }
 
+    public static void eightTaskSolution(int step, int[] array) {
+        System.out.println("\nРешение задачи №8:");
+        System.out.println("Изначальный массив: \n" + Arrays.toString(array));
+        System.out.println("Смещаем " + ((step < 0) ? "влево на " + (-step) : "вправо на " + step));
+        if (step > 0) {
+            step %= array.length;
+            step = array.length - step;
+        } else {
+            step = -step;
+        }
+        for (int i = 0; i < step; i++) {
+            int firstElement = array[0];
+            for (int j = 1; j < array.length; j++) {
+                array[j - 1] = array[j];
+            }
+            array[array.length - 1] = firstElement;
+        }
+        System.out.println("Получившийся массив: \n" + Arrays.toString(array));
     }
 }
 
