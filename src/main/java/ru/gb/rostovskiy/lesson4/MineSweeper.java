@@ -54,14 +54,14 @@ public class MineSweeper {
     }
 
     private static boolean isCheckParam() {
-        if (width <= 0 || width > 27) {
+        if (width <= 0) {
             System.out.println("Введены некорректные значения по размерности ширины поля");
-            System.out.println("Введено " + width + ". Ширина должна быть не более 27 и не менее 0.");
+            System.out.println("Введено " + width + ". Ширина поля не может быть отрицательной!");
             System.out.println("Игра окончена!");
             return false;
         } else if (height <= 0) {
             System.out.println("Введены некорректные значения по размерности высоты поля");
-            System.out.println("Введено " + height + ". Высота не может быть отрицательной!");
+            System.out.println("Введено " + height + ". Высота поля не может быть отрицательной!");
             System.out.println("Игра окончена!");
             return false;
         } else if (width * height <= minesCount || minesCount <= 0) {
