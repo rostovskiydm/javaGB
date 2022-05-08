@@ -18,7 +18,7 @@ public class Cat extends Animal {
         if (distance <= MAX_RUN_DISTANCE && distance >= 0) {
             System.out.println(getName() + " пробежал " + distance + "м");
         } else {
-            System.out.println("Котик не может столько пробежать... у него лапки");
+            System.out.println(getName() + " не может столько пробежать... у него лапки");
         }
     }
 

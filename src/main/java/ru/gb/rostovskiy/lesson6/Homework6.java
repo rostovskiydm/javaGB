@@ -11,7 +11,7 @@ public class Homework6 {
         };
 
         for (Animal animal : animals) {
-            animal.run(150);
+            animal.run(250);
             animal.swim(20);
         }
         System.out.println("Всего животных: " + Animal.count);
