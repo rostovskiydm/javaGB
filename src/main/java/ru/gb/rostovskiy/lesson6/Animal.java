@@ -4,7 +4,7 @@ public abstract class Animal {
     private String name;
     private int age;
     private double weight;
-    static int count;
+    private static int count;
 
     public Animal(String name, int age, double weight) {
         this.name = name;
@@ -37,7 +37,7 @@ public abstract class Animal {
         this.weight = weight;
     }
 
-    private  int getCount() {
+    public static int getCount() {
         return count;
     }
 
@@ -47,4 +47,6 @@ public abstract class Animal {
     public abstract void voice();
     public abstract void run(int distance);
     public abstract void swim(int distance);
+
+
 }

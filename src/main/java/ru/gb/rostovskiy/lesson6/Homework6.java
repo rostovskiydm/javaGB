@@ -14,8 +14,8 @@ public class Homework6 {
             animal.run(250);
             animal.swim(20);
         }
-        System.out.println("Всего животных: " + Animal.count);
-        System.out.println("Котов: " + Cat.count);
-        System.out.println("Собак: " + Dog.count);
+        System.out.println("Всего животных: " + Animal.getCount());
+        System.out.println("Котов: " + Cat.getCount());
+        System.out.println("Собак: " + Dog.getCount());
     }
 }

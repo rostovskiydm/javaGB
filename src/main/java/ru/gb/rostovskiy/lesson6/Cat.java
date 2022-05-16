@@ -2,10 +2,14 @@ package ru.gb.rostovskiy.lesson6;
 
 public class Cat extends Animal {
     final static int MAX_RUN_DISTANCE = 200;
-    static int count;
+    private static int count;
     public Cat(String name, int age, double weight) {
         super(name, age, weight);
         count++;
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     @Override

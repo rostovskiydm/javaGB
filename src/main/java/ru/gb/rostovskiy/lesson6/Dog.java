@@ -3,10 +3,14 @@ package ru.gb.rostovskiy.lesson6;
 public class Dog extends Animal {
     final static int MAX_RUN_DISTANCE = 500;
     final static int MAX_SWIM_DISTANCE = 10;
-    static int count;
+    private static int count;
     public Dog(String name, int age, double weight) {
         super(name, age, weight);
         count++;
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     @Override
