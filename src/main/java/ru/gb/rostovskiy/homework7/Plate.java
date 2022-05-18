@@ -16,9 +16,21 @@ public class Plate {
     }
 
     public void info() {
-        System.out.println("plate: " + food);
+        System.out.println("В тарелке осталось: " + food + " еды");
     }
-    public void decreaseFood (int n){
-        food -= n;
+
+    public boolean decreaseFood(int n) {
+        if (n <= food) {
+            food -= n;
+            return true;
+        } else {
+            System.out.println("Пополните миску! В миске " + food + " еды, а кот хочет съесть " + n);
+            return false;
+        }
+
+    }
+
+    public void increaseFood(int n) {
+        food += n;
     }
 }
