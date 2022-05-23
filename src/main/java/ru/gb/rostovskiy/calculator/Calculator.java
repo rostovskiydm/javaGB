@@ -13,6 +13,7 @@ public class Calculator extends JFrame {
 
     final private int[] numberArray = {7, 8, 9, 4, 5, 6, 1, 2, 3, 0};
 
+
     public Calculator() {
         setTitle("Calculator");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
